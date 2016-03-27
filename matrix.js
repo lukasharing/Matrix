@@ -88,8 +88,8 @@ function Matrix(i){
 		for (var y = 0; y < ly; y++){
 			for (var x = 0; x < lx; x++)
 			{
-				var v0 = values[y][x];
-				var v1 = values[y][lx - x + 1];
+				var v0 = this.values[y][x];
+				var v1 = this.values[y][lx - x + 1];
 				this.values[y][x] = v1;
 				this.values[y][lx - x + 1] = v0;
 			}
@@ -103,8 +103,8 @@ function Matrix(i){
 		for (var y = 0; y < ly; y++){
 			for (var x = 0; x < lx; x++)
 			{
-				var v0 = values[y][x];
-				var v1 = values[ly - y + 1][x];
+				var v0 = this.values[y][x];
+				var v1 = this.values[ly - y + 1][x];
 				this.values[y][x] = v1;
 				this.values[ly - y + 1][x] = v0;
 			}
